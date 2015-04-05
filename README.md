@@ -8,4 +8,5 @@
 4.	Type Import-Csv .\ <filename.csv> 
 5.	Type the following command:
 
-Import-Csv .\<filename.csv> | New-ADUser –AccountPassword (ConvertTo-SecureString –AsPlaintext “password” –Force) –Path “OU=OU_Name,DC=DC,DC=local"
+Import-Csv .\HAL-Users.csv | New-ADUser –AccountPassword (ConvertTo-SecureString –AsPlaintext “p@55word123” –Force) -CannotChangePassword $True –Path “OU=Test,DC=cybersecurity,DC=local" 
+
